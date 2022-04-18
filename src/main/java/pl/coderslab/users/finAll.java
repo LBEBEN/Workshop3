@@ -1,7 +1,5 @@
 package pl.coderslab.users;
 
-import pl.coderslab.utils.UserDao;
-
 import java.util.Arrays;
 
 public class finAll {

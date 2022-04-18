@@ -1,7 +1,6 @@
-package pl.coderslab.utils;
+package pl.coderslab.users;
 
 import pl.coderslab.utils.DbUtil;
-import pl.coderslab.utils.User;
 
 import java.sql.*;
 import java.util.Arrays;
