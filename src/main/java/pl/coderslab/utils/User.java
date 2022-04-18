@@ -34,7 +34,6 @@ public class User {
 
     @Override
     public String toString() {
-        return "Użytkownik o id "+ id + " to " + userName + " o emailu '" + email + '\'' +
-                " i haśle " + password + ".";
+        return "Użytkownik o id "+ id + " to " + userName + " " + email + " " + password + ".";
     }
 }

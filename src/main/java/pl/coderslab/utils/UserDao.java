@@ -41,7 +41,7 @@ public class UserDao {
     }
 
     public User read(int userID){
-        try(Connection connection =DbUtil.getConnection()) {
+        try(Connection connection = DbUtil.getConnection()) {
             PreparedStatement statement = connection.prepareStatement(READ_FROM_DB_QUERY);
             statement.setString(1,String.valueOf(userID));
             ResultSet resultSet = statement.executeQuery();
@@ -61,7 +61,7 @@ public class UserDao {
     }
 
     public void update(User user){
-        try(Connection connection =DbUtil.getConnection()){
+        try(Connection connection = DbUtil.getConnection()){
             PreparedStatement statement = connection.prepareStatement(UPDATE_USER_QUERY);
             statement.setString(1, user.getUserName());
             statement.setString(2, user.getEmail());
@@ -99,9 +99,7 @@ public class UserDao {
                 users = Arrays.copyOf(users, users.length+1);
                 users[users.length-1] = user;
             }
-            for(int i=0; i < users.length; i++){
-                System.out.println(users[i]);
-            }
+
             return users;
         }
         catch (SQLException e){
